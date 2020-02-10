@@ -1,8 +1,8 @@
 body {
-    background-color: pink;
+    background-color: #55f;
 }
 
-div {
+.firstDivAlignment {
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -12,15 +12,38 @@ div {
 
 h1 {
     margin: auto;
-        width: 50%;
-        padding: 10px;
-        text-align: center;
-        background-color: white;
+    width: 50%;
+    padding: 10px 10px 5px 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+h2 {
+    margin: auto;
+    width: 50%;
+    padding: 10px 0 10px 0;
+}
+
+h3 {
+    margin: auto;
+    width: 50%;
+}
+
+p {
+    margin: auto;
+    width: 50%;
+    padding: 5px 10px;
 }
 
 table {
     margin: auto;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.maniPedi {
+    margin: auto;
+    padding: 0;
+    width: 100%;
 }
