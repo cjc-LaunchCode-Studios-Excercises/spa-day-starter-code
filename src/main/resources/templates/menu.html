@@ -24,13 +24,13 @@
             </tr>
         </th:block>
     </table>
-    <div th:if='${manipedi.equals("manicure")}' class="maniPedi">
+    <div th:if='${manipedi.equals("manicure")}'>
         <div th:replace="fragments :: manicureWithHeader"></div>
     </div>
-    <div th:if='${manipedi.equals("pedicure")}' class="maniPedi">
+    <div th:if='${manipedi.equals("pedicure")}'>
         <div th:replace="fragments :: pedicureWithHeader"></div>
     </div>
-    <div th:if='${manipedi.equals("both")}' class="maniPedi">
+    <div th:if='${manipedi.equals("both")}'>
         <div th:replace="fragments :: manicureWithHeader"></div>
         <div th:replace="fragments :: pedicureWithHeader"></div>
     </div>
