@@ -15,15 +15,17 @@
 </div>
 <div id = "servicesMenu" class="firstDivAlignment">
     <h2>Menu of Available Services</h2>
-    <h3>Appropriate Facials</h3>
-    <p>The facial treatments below are recommended by our estheticians for your given skin type:</p>
-    <table>
-        <th:block th:each="facial : ${appropriateFacials}">
-            <tr>
-                <td th:text="${facial}"></td>
-            </tr>
-        </th:block>
-    </table>
+    <div class="servicesAvailable">
+        <h3>Appropriate Facials</h3>
+        <p>The facial treatments below are recommended by our estheticians for your given skin type:</p>
+        <table>
+            <th:block th:each="facial : ${appropriateFacials}">
+                <tr>
+                    <td th:text="${facial}"></td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
     <div th:if='${manipedi.equals("manicure")}'>
         <div th:replace="fragments :: manicureWithHeader"></div>
     </div>
