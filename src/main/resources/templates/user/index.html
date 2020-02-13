@@ -7,15 +7,11 @@
 <body>
     <h1>Hello <span th:text="${user.username}"></span>!!!</h1>
     <a href="../">Select Services</a>
-
     <ul>
-        <li>list one</li>
-    </ul>
-    <th:block th:each="aUser : ${users}">
-        <ul>
+        <th:block th:each="aUser : ${users}">
             <li><a th:href="@{/user/info/{id}(id=${aUser.id})}" th:text="${aUser.username}"></a></li>
-            <li th:text="${aUser.email}"></li>
-        </ul>
-    </th:block>
+        </th:block>
+    </ul>
+
 </body>
 </html>

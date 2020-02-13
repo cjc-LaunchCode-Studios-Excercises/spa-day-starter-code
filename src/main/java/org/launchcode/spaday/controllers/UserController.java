@@ -14,6 +14,8 @@ public class UserController {
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         if(user.getPassword().equals(verify)) {
             model.addAttribute("user", user);
+            //need to make sure user is added to user data
+            UserData.add(user);
             model.addAttribute("users", UserData.getAll());
             return "user/index";
         } else {
@@ -36,9 +38,7 @@ public class UserController {
     public String showUserInformation (Model model, @PathVariable int userId) {
         User user = UserData.getById(userId);
         model.addAttribute("user", user);
-        return "userInfo";
+        return "user/userInfo";
     }
-
-
 
 }

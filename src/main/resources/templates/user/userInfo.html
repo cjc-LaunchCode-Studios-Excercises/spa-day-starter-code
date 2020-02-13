@@ -5,7 +5,8 @@
     <title></title>
 </head>
 <body>
-    <p th:text="${user.username}"></p>
-    <p th:text="${user.email}"></p>
+    <p>Name: <span th:text="${user.username}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <p>Date Joined: <span th:text="${user.dateJoined}"></span></p>
 </body>
 </html>
