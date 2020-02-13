@@ -16,9 +16,14 @@ public class UserController {
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         if(user.getPassword().equals(verify)) {
             model.addAttribute("user", user);
-            return "index";
+            return "user/index";
+        } else {
+            model.addAttribute("error", "Passwords should match");
+            model.addAttribute("username", user.getUsername());
+            model.addAttribute("email", user.getEmail());
+            return "user/add";
         }
-        return "user/add";
+
     }
 
     //exists at user/add
@@ -26,6 +31,7 @@ public class UserController {
     public String displayAddUserForm() {
         return "/user/add";
     }
+
 
 
 
